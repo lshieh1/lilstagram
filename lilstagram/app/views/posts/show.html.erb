@@ -1,0 +1,16 @@
+<p><%= link_to '<< Back to Posts', posts_path %></p>
+<h1><%= link_to "#{@post.user.email}", user_path(@post.user.id) %></h1>
+<img alt='' src='<%= @post['image'] %>' />
+<p><%= @post.caption %></p>
+<% if @user == @post.user.id %>
+	<p><%= link_to 'Edit Post', edit_post_path(@post.id) %></p>
+	<p><%= link_to 'Delete Post', post_path(@post.id), method: :delete %></p>
+<% end %>
+<h2>Comments!!</h2>
+
+<%= render partial: 'comments/form' %>
+
+<% @comments.each do |c| %>
+	<p><b><%= c.user.email %>:</b></p>
+	<p><%= c.text %></p>
+<% end %>

@@ -1,0 +1,12 @@
+<h1><%= @user.email %></h1>
+<p><%= link_to '<< Back to Posts', posts_path %></p>
+<% @posts.each do |post| %>
+	<hr>
+	<div>
+		<img alt='' src='<%= post['image'] %>' />
+		<p><%= post['caption'] %></p>
+		<p><%= link_to 'View More', post_path(post.id) %></p>
+	</div>
+	<hr>
+<% end %>
+

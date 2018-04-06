@@ -1,0 +1,8 @@
+<div class='form'>
+	<form method='post' action='/posts'>
+		<input type='text' name="post[image]" placeholder='Enter Image URL' />
+		<input type='text' name="post[caption]" placeholder='Enter Image Caption' />
+		<input type='hidden' name='authenticity_token' value="<%= form_authenticity_token %>" />
+		<input type='submit' value='Post Image!' />
+	</form>
+</div>
