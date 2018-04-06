@@ -6,9 +6,9 @@ My very simple and basic version of Instagram using Ruby on Rails
 https://github.com/lshieh1/lilstagram/blob//images/20180405_220845.jpg
 
 ## Technologies Used
--Ruby on Rails: used for CRUD and basis of paa
--Postgresql: used to store data
--Devise: user-auth
+*Ruby on Rails: used for CRUD and basis of app
+*Postgresql: used to store data
+*Devise: user-auth
 
 ## Code Snippet
 
@@ -26,7 +26,7 @@ My biggest challenge in this mini-project was figuring out how to include the co
 I actually want to continue improving this project.  I want to make it look prettier and add more functions that Instagram has. 
 
 ## Instructions for loading
--clone down from repo
--rails s
+*clone down from repo
+*rails s
 
 
