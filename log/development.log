@@ -4332,3 +4332,834 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-25 21:25:20 -0400
+  [1m[35m (34.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (37.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (29.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (240.1ms)
+Completed 200 OK in 1996ms (Views: 1762.1ms | ActiveRecord: 99.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-25 21:25:42 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3h+jCZa9rXCfiaV446rG7QbmaZcoMdrJGwNYnNWRotTc1qab5YvdFTIxS5B0M5gQviI0DP+gziApLdlSMG9iGA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 113ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:25:42 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (69.5ms)
+Completed 200 OK in 102ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:32:41 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.6ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (31.4ms)
+Completed 500 Internal Server Error in 287ms (ActiveRecord: 4.3ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "@import ": expected file to import (string or url()), was "‘bootstrap’;"):
+     5:     <title>Lilstagram</title>
+     6:     <%= csrf_meta_tags %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:1
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__529962346808121885_47199158187380'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:41:03 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/lillian/code/wdi/Projects/lilstagram/app/assets/config
+  /home/lillian/code/wdi/Projects/lilstagram/app/assets/images
+  /home/lillian/code/wdi/Projects/lilstagram/app/assets/javascripts
+  /home/lillian/code/wdi/Projects/lilstagram/app/assets/stylesheets
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.1.6/lib/assets/compiled
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionview-5.1.6/lib/assets/compiled
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/lillian/code/wdi/Projects/lilstagram/node_modules
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/popper_js-1.12.9/assets/javascripts
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-4.1.0/assets/stylesheets
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-4.1.0/assets/javascripts
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-4.1.0/assets/stylesheets):
+     5:     <title>Lilstagram</title>
+     6:     <%= csrf_meta_tags %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.css.sass:1
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__529962346808121885_70072304306920'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:43:17 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (2.3ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 6577ms (Views: 6575.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:43:47 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MmnQWmQkoHAMWA6A/H0k88yah5/e5/qOBc7IivgoiFBqRHaRft0AE8MLxCH3E/WUlJIx71bBoPOzUicZrKPROw==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (106.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "me@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 502ms (ActiveRecord: 106.1ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MmnQWmQkoHAMWA6A/H0k88yah5/e5/qOBc7IivgoiFBqRHaRft0AE8MLxCH3E/WUlJIx71bBoPOzUicZrKPROw==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 203ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:43:53 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zeSVCmM7Zu6NZC8Yv7WGxdz6P5DIXefXNsxaDNeq3HeVyTPBecLGjUI35bm021eihPKJ4EB7vaqAULWfgyGFHA==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "me@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 171ms (ActiveRecord: 0.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zeSVCmM7Zu6NZC8Yv7WGxdz6P5DIXefXNsxaDNeq3HeVyTPBecLGjUI35bm021eihPKJ4EB7vaqAULWfgyGFHA==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 202ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:43:55 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QW+brnMIc2G4LLvEcmLh7eENqZcQ/p8F8YmZiSUcnlMZQj1lafHTAnd/cWV5DDCKuQUf55jYxXhHFXYacZfHOA==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "me@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 174ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QW+brnMIc2G4LLvEcmLh7eENqZcQ/p8F8YmZiSUcnlMZQj1lafHTAnd/cWV5DDCKuQUf55jYxXhHFXYacZfHOA==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 204ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:44:10 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0YR3kwim5vaiuVna0sQrnuTI10PmuZ89bACnt2Ti6sSJqdFYEl9GlW3qk3vZqvr5vMBhM26fxUDanEgkMGmzrw==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "me@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 174ms (ActiveRecord: 0.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0YR3kwim5vaiuVna0sQrnuTI10PmuZ89bACnt2Ti6sSJqdFYEl9GlW3qk3vZqvr5vMBhM26fxUDanEgkMGmzrw==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 200ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:44:13 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ne9Wq2b1rphaqV1A2ks/bq21Q7+oWU/860jX1JFiKcltwvBgfAwO+5X6l+HRJe4J9b31zyB/FYFd1DhHxelwog==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "me@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 173ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ne9Wq2b1rphaqV1A2ks/bq21Q7+oWU/860jX1JFiKcltwvBgfAwO+5X6l+HRJe4J9b31zyB/FYFd1DhHxelwog==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.7ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 203ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:44:17 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7aFNbYDV3/IFgVoexq/ZN9g6euExyL6w2vivkAJ++GW1jOummix/kcrSkL/NwQhQgDLMkbnu5M1sZEADVvWhDg==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "me@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 174ms (ActiveRecord: 1.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7aFNbYDV3/IFgVoexq/ZN9g6euExyL6w2vivkAJ++GW1jOummix/kcrSkL/NwQhQgDLMkbnu5M1sZEADVvWhDg==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 201ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:44:27 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d1R9XxG7F9MRloI4Xi11pJbwYEzyogsfV3wUCBFE1wgveduUC0K3sN7FSJlVQ6TDzvjWPHqEUWLh4PubRc+OYw==", "user"=>{"email"=>"you@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "you@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 214ms (ActiveRecord: 1.3ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d1R9XxG7F9MRloI4Xi11pJbwYEzyogsfV3wUCBFE1wgveduUC0K3sN7FSJlVQ6TDzvjWPHqEUWLh4PubRc+OYw==", "user"=>{"email"=>"you@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 206ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:44:30 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tA9JUvHTMRGPpWKsMBFPRHDMLCmhv1Xe7XPqRl3dxEHsIu+Z6yqRckD2qA07f54jKMSaWSmZD6Nb7wXVCVadKg==", "user"=>{"email"=>"you@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "you@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 173ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tA9JUvHTMRGPpWKsMBFPRHDMLCmhv1Xe7XPqRl3dxEHsIu+Z6yqRckD2qA07f54jKMSaWSmZD6Nb7wXVCVadKg==", "user"=>{"email"=>"you@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 200ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:44:34 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"izUm7zRso3x8DSg4twAKNgkkyTBpiQy7p3iZNe8K0MHTGIAkLpUDH7Ne4pm8bttRUSx/QOGvVsYR5Hamu4GJqg==", "user"=>{"email"=>"you@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "you@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 171ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"izUm7zRso3x8DSg4twAKNgkkyTBpiQy7p3iZNe8K0MHTGIAkLpUDH7Ne4pm8bttRUSx/QOGvVsYR5Hamu4GJqg==", "user"=>{"email"=>"you@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 199ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-25 21:44:38 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.9ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-04-25 21:44:53 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m9sV4xSLRL9MFDgADho2zS61U20Z2SfP8ozYxfIzuCjY9HJqHDXFzndbXCdo4M8k1qCZgafiDPY0K4OxM0cGHA==", "user"=>{"email"=>"cute@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cute@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (74.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "cute@gmail.com"], ["encrypted_password", "$2a$11$ZAioTEr2SVaONEpiLkF0k.Eov45hrUF6t7/GT7XCgRXAhTqSfBfFO"], ["created_at", "2018-04-26 01:44:53.241840"], ["updated_at", "2018-04-26 01:44:53.241840"]]
+  [1m[35m (101.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-04-26 01:44:53.420216"], ["last_sign_in_at", "2018-04-26 01:44:53.420216"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", "2018-04-26 01:44:53.420948"], ["id", 5]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 446ms (ActiveRecord: 197.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-25 21:44:53 -0400
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (63.2ms)
+Completed 200 OK in 122ms (Views: 85.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2018-04-25 21:45:13 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (9.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered comments/_form.html.erb (2.0ms)
+  [1m[36mComment Load (60.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (102.5ms)
+Completed 200 OK in 260ms (Views: 68.6ms | ActiveRecord: 74.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-04-25 21:45:18 -0400
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 57ms (Views: 51.8ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-25 21:47:14 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AnaiNf3GagN6f8UBzr+/FS2m+XtdLL/fq9onCeleFqxaWwT+5z/KYLUsD6DF0W5yda5PC9UK5aIdRsiavdVPxw=="}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 22ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:47:14 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:56:21 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.8ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 3186ms (Views: 3183.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:58:12 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 3224ms (Views: 3222.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:58:26 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 3103ms (Views: 3100.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-25 21:58:40 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 3038ms (Views: 3036.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-25 22:00:05 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 2791ms (Views: 2789.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-25 22:00:35 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 20:26:20 -0400
+  [1m[35m (35.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 61ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-15 20:26:23 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (51.1ms)
+Started GET "/" for 127.0.0.1 at 2018-05-15 20:26:29 -0400
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-15 20:26:29 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.6ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 2553ms (ActiveRecord: 0.0ms)
+
+
+  
+Completed 500 Internal Server Error in 8714ms (ActiveRecord: 40.0ms)
+
+
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'application/javascript'
+Checked in these paths: 
+  /home/lillian/code/wdi/Projects/lilstagram/app/assets/config
+  /home/lillian/code/wdi/Projects/lilstagram/app/assets/images
+  /home/lillian/code/wdi/Projects/lilstagram/app/assets/javascripts
+  /home/lillian/code/wdi/Projects/lilstagram/app/assets/stylesheets
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/materialize-sass-0.100.2/app/assets/fonts
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/materialize-sass-0.100.2/app/assets/javascripts
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.1.6/lib/assets/compiled
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionview-5.1.6/lib/assets/compiled
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/lillian/code/wdi/Projects/lilstagram/node_modules
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/materialize-sass-0.100.2/app/assets/javascripts
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/materialize-sass-0.100.2/app/assets/fonts
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/materialize-sass-0.100.2/app/assets/images):
+  
+     5:     <title>Lilstagram</title>
+     6:     <%= csrf_meta_tags %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'application/javascript'
+Checked in these paths: 
+  /home/lillian/code/wdi/Projects/lilstagram/app/assets/config
+  /home/lillian/code/wdi/Projects/lilstagram/app/assets/images
+  /home/lillian/code/wdi/Projects/lilstagram/app/assets/javascripts
+  /home/lillian/code/wdi/Projects/lilstagram/app/assets/stylesheets
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/materialize-sass-0.100.2/app/assets/fonts
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/materialize-sass-0.100.2/app/assets/javascripts
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.1.6/lib/assets/compiled
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionview-5.1.6/lib/assets/compiled
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/lillian/code/wdi/Projects/lilstagram/node_modules
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/materialize-sass-0.100.2/app/assets/javascripts
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/materialize-sass-0.100.2/app/assets/fonts
+  /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/materialize-sass-0.100.2/app/assets/images):
+  
+     5:     <title>Lilstagram</title>
+     6:     <%= csrf_meta_tags %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2959066978974320943_70343477810820'
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2959066978974320943_47365047560380'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-15 20:27:10 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (5.8ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 564ms (Views: 562.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-15 20:29:03 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-15 20:29:43 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-15 20:29:48 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-15 20:30:05 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2P+U/0fW5MaUcKKm9FvRk45rnjQwF69fAc4gyW2JeJXzeJyCPZfgDYQwX9gmA/lrD8OaIpqpWj9W1pnK53zsQg==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (254.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "me@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 1399ms (ActiveRecord: 254.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2P+U/0fW5MaUcKKm9FvRk45rnjQwF69fAc4gyW2JeJXzeJyCPZfgDYQwX9gmA/lrD8OaIpqpWj9W1pnK53zsQg==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 205ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-15 20:30:28 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1qFP1whZaB/ZPa0NFGpBgccRDtzhO2ByeaJgOZQ/83xKMO6Q+JIoWvYHIuah9Qcqb9Kjhtnsc9OXo6hlnxicew==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "me@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 172ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1qFP1whZaB/ZPa0NFGpBgccRDtzhO2ByeaJgOZQ/83xKMO6Q+JIoWvYHIuah9Qcqb9Kjhtnsc9OXo6hlnxicew==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 206ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-15 20:30:35 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CMcgv94cfxGUD5ColVNOtz+Pexk/5O7e8nL2hq3WTymUVoH4Ltc/VLs1H0MgzAgcl0zWQwcz/X8ccz7apvEgLg==", "user"=>{"email"=>"you@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "you@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 173ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CMcgv94cfxGUD5ColVNOtz+Pexk/5O7e8nL2hq3WTymUVoH4Ltc/VLs1H0MgzAgcl0zWQwcz/X8ccz7apvEgLg==", "user"=>{"email"=>"you@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 201ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-15 20:30:58 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"82l3Ubc3zpi98DXv9XpK1oSz2TvEvqB0uQvrjjmd1vBv+NYWR/yO3ZLKugRA5Qx9LHB0Yfxps9VXCiPSMrq59w==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "me@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 180ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"82l3Ubc3zpi98DXv9XpK1oSz2TvEvqB0uQvrjjmd1vBv+NYWR/yO3ZLKugRA5Qx9LHB0Yfxps9VXCiPSMrq59w==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 209ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-15 20:31:08 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c7b8pA+yhv+FBf5xiTIBHP+h/9I8bq+mdBZw4Oniv6vvJ13j/3nGuqo/cZo8rUe3V2JSiAS5vAeaF7i84sXQrA==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "me@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 180ms (ActiveRecord: 1.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c7b8pA+yhv+FBf5xiTIBHP+h/9I8bq+mdBZw4Oniv6vvJ13j/3nGuqo/cZo8rUe3V2JSiAS5vAeaF7i84sXQrA==", "user"=>{"email"=>"me@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 208ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-15 20:31:11 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (2.9ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-15 20:31:25 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wBla1KOJQKunAoliZCjdCRVam8LaaCUMT3h2hmRfEWz9oDOMF+kQoZ0MqCulQU7IuWRIJPmf/L7kw7D9Hm41fA==", "user"=>{"email"=>"cool@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (35.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cool@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (22.0ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 383ms (Views: 41.0ms | ActiveRecord: 57.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-15 20:31:40 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jjDcy0pf8vMom5AlnQfWDmuWaYTFviOgzQSnycsH8QoSoX2MupSytgehH84omJClw1XE3v1pMAEjBW+VwCCeDQ==", "user"=>{"email"=>"merp@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "merp@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 231ms (Views: 42.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-15 20:32:22 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fHekN6p+179x2h+W+BVN1ebURZFd0Ync4Omdf5MPxaXg5gVwWrWX+l7gkH1Nigt+Thfoy2UGmn0O6FUjmCiqog==", "user"=>{"email"=>"lol@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lol@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (66.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "lol@gmail.com"], ["encrypted_password", "$2a$11$9Sm6fp5fBIMmV8lzHJ7Cn.q1QPZpSnuY/JUcfvvkT9BJJzVMAob1m"], ["created_at", "2018-05-16 00:32:23.114345"], ["updated_at", "2018-05-16 00:32:23.114345"]]
+  [1m[35m (42.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (26.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-05-16 00:32:23.227753"], ["last_sign_in_at", "2018-05-16 00:32:23.227753"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", "2018-05-16 00:32:23.228994"], ["id", 6]]
+  [1m[35m (10.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 342ms (ActiveRecord: 147.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 20:32:23 -0400
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (49.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (102.8ms)
+Completed 200 OK in 235ms (Views: 79.9ms | ActiveRecord: 54.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2018-05-15 20:32:50 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered comments/_form.html.erb (3.0ms)
+  [1m[36mComment Load (157.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (202.3ms)
+Completed 200 OK in 435ms (Views: 85.4ms | ActiveRecord: 166.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-05-15 20:33:04 -0400
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 62ms (Views: 56.6ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-05-15 20:33:34 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bO0VdnguiFLZgLj8j3+py1KLPhGB8xPVRAjPdPUEtBPwfLQxiOXIF/a6Nxc64O9g+kiTS7kkAHSqCQco/iPbFA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 78ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-15 20:33:34 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-15 20:33:43 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E/J/RxBvFcXopLJ/jmd3rg5Pfd/dn2SRqWRHVpz+ySY3ASYQRVg1eyZwd5eC6/3J1oUrRLJ+6E0K4/k/i98J1g==", "user"=>{"email"=>"lol@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lol@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (82.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", "2018-05-16 00:33:43.820635"], ["sign_in_count", 2], ["updated_at", "2018-05-16 00:33:43.822099"], ["id", 6]]
+  [1m[35m (13.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 303ms (ActiveRecord: 97.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 20:33:43 -0400
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 60ms (Views: 53.5ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-05-15 20:34:01 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y5RbpSvEODAdrXp0PJ3CgGB34+xdCmBfXn6zya5BaxGbU1mECKjd01BY24+V8to6aa0kaAvAkJyx8pDLh81GAA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-15 20:34:01 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-15 20:34:28 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tCeqsWcDHGm5Cde0pxX+tEHEQGvibu+eDqACQLyAcfWVAsgLF5ZRd5O0EQrTx4NZkXFt6+TBqL78pdo4TYSpjA==", "user"=>{"email"=>"lol@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lol@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-05-16 00:34:28.421171"], ["last_sign_in_at", "2018-05-16 00:33:43.820635"], ["sign_in_count", 3], ["updated_at", "2018-05-16 00:34:28.423358"], ["id", 6]]
+  [1m[35m (30.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 220ms (ActiveRecord: 32.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 20:34:28 -0400
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 47ms (Views: 39.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 20:37:17 -0400
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 267ms (Views: 262.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 20:38:00 -0400
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 46ms (Views: 39.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 20:38:53 -0400
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 47ms (Views: 41.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-05-15 20:39:04 -0400
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 166ms (Views: 125.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 20:42:07 -0400
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 51ms (Views: 45.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 20:42:30 -0400
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 48ms (Views: 38.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 20:42:43 -0400
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 55ms (Views: 47.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 20:43:03 -0400
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY updated_at DESC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 48ms (Views: 42.5ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-05-15 20:43:19 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6a+t4XTHZg15jTtfNOYFGfAkWt5NOTZZB27MvZuP16rBE8qeRNCQLPl7BtFKYmWnMu2wqD8kUp+pjntgPD0cpw=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-15 20:43:19 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered /home/lillian/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
